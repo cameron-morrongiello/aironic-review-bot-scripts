@@ -1,0 +1,9 @@
+# Function dependencies, for example:
+# package>=version
+
+requests
+requests-oauthlib
+pyppeteer
+python-dotenv
+openai
+firebase_admin
