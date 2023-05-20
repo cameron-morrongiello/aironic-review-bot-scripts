@@ -3,8 +3,10 @@ import requests
 import json
 from requests_oauthlib import OAuth1
 
-from dotenv import load_dotenv
-load_dotenv()
+if not os.getenv('GITHUB_ACTIONS'):
+    # Code is running locally
+    from dotenv import load_dotenv
+    load_dotenv()
 
 
 consumer_key = os.environ.get("CONSUMER_KEY")

@@ -1,8 +1,10 @@
 import openai
 import os
 
-from dotenv import load_dotenv
-load_dotenv()
+if not os.getenv('GITHUB_ACTIONS'):
+    # Code is running locally
+    from dotenv import load_dotenv
+    load_dotenv()
 
 # Set up OpenAI API credentials
 openai.api_key = os.environ.get("OPENAI_API_KEY")
