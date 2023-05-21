@@ -23,8 +23,6 @@ service_account_key = {
     "universe_domain": os.environ.get("UNIVERSE_DOMAIN")
 }
 
-print(f" Test: {service_account_key['type']}")
-
 # Initialize Firebase Admin SDK
 cred = credentials.Certificate(service_account_key)
 firebase_admin.initialize_app(cred)
@@ -68,7 +66,8 @@ def __delete_product_links(product_link):
 
 def use_random_product_link():
     link = __get_random_product_link()
-    __delete_product_links(link)
+    if link:
+        __delete_product_links(link)
     return link
 
 
