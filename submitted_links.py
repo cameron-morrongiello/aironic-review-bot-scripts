@@ -4,8 +4,10 @@ from firebase_admin import firestore
 import random
 import os
 
-from dotenv import load_dotenv
-load_dotenv()
+if not os.getenv('GITHUB_ACTIONS'):
+    # Code is running locally
+    from dotenv import load_dotenv
+    load_dotenv()
 
 service_account_key = {
     "type": os.environ.get("type"),
