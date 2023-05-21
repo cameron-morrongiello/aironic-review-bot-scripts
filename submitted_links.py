@@ -10,7 +10,7 @@ if not os.getenv('GITHUB_ACTIONS'):
     load_dotenv()
 
 service_account_key = {
-    "type": os.environ.get("type"),
+    "type": os.environ.get("TYPE"),
     "project_id": os.environ.get("project_id"),
     "private_key_id": os.environ.get("private_key_id"),
     "private_key": os.environ.get("private_key"),
