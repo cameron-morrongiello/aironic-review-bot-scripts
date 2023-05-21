@@ -23,6 +23,7 @@ service_account_key = {
     "universe_domain": os.environ.get("universe_domain")
 }
 
+print(service_account_key['type'])
 
 # Initialize Firebase Admin SDK
 cred = credentials.Certificate(service_account_key)
