@@ -14,7 +14,7 @@ jobs:
       CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
       CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      type: ${{ secrets.type }}
+      type: ${{ secrets.TYPE }}
       project_id: ${{ secrets.project_id }}
       private_key_id: ${{ secrets.private_key_id }}
       private_key: ${{ secrets.private_key }}
